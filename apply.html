@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Apply to vana London | Curated Weekend Escapes Near London</title>
+  <meta name="description" content="Apply to join vana’s curated weekend escapes near London. Small groups, boutique stays, and zero weird vibes." />
+  <link rel="canonical" href="https://www.vanalondon.com/apply.html"/>
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Apply | Join the vana waitlist"/>
+  <meta property="og:description" content="Apply to join curated weekend escapes near London. Small groups, boutique stays, and zero weird vibes."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.vanalondon.com/apply.html"/>
+  <meta property="og:image" content="/assets/images/og.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Apply | Join the vana waitlist"/>
+  <meta name="twitter:description" content="Apply to join curated weekend escapes near London. Small groups, boutique stays, and zero weird vibes."/>
+  <meta name="twitter:image" content="/assets/images/og.jpg"/>
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/assets/icons/favicon-180.png">
+  <link rel="manifest" href="/assets/site.webmanifest">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <meta name="theme-color" content="#714B4B">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Urbanist:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/style.css?v=11.6"/>
+
+  <!-- Consent defaults (deny until accepted) -->
+  <script>
+    (function(w,d){
+      w.dataLayer = w.dataLayer || [];
+      function gtag(){ w.dataLayer.push(arguments); }
+      w.gtag = gtag;
+      gtag('consent','default',{
+        ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+        analytics_storage:'denied', functionality_storage:'granted', security_storage:'granted',
+        wait_for_update:500
+      });
+    })(window, document);
+  </script>
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCSZ025VD0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-ZCSZ025VD0', {'anonymize_ip': true});
+  </script>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "vana",
+    "url": "https://www.vanalondon.com",
+    "sameAs": ["https://www.instagram.com/vana.london","https://www.linkedin.com/company/vanalondon","https://www.tiktok.com/@vana.london"],
+    "logo": "https://www.vanalondon.com/assets/icons/favicon-180.png",
+    "contactPoint": [{
+      "@type":"ContactPoint",
+      "email":"hello@vanalondon.com",
+      "contactType":"customer support"
+    }]
+  }
+  </script>
+
+  <!-- Minimal reveal (Apply) -->
+  <style>
+    :root { --reveal-dur: 600ms; --reveal-ease: cubic-bezier(.2,.65,.3,1); }
+    .reveal { opacity: 0; transform: translateY(18px); will-change: opacity, transform;
+      transition: opacity var(--reveal-dur) var(--reveal-ease), transform var(--reveal-dur) var(--reveal-ease); }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+</head>
+<body class="apply">
+
+  <a class="sr-only" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header>
+    <div class="wrap nav">
+      <div class="brand"><a href="/"><span>vana</span></a></div>
+      <nav class="links" aria-label="Primary">
+        <a href="/" id="nav-home">Home</a>
+        <a href="/about.html" id="nav-about">About</a>
+        <a href="/apply.html" id="nav-apply">Apply</a>
+        <a href="/faq.html" id="nav-faq">FAQ</a>
+        <a href="/private-events.html" id="nav-private">Private Events</a>
+        <a href="/partnerships.html" id="nav-partnerships">Partnerships</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero small slant-bottom hero--bg hero--contrast">
+      <div class="wrap reveal">
+        <h1>Join the waitlist.</h1>
+        <p class="lede">Tell us a bit about you. If it’s a match, we’ll be in touch.</p>
+      </div>
+    </section>
+
+    <section class="alt slant-top">
+      <div class="wrap reveal">
+        <form name="vana-application" method="POST" data-netlify="true" action="/thank-you.html" netlify-honeypot="bot-field" class="card form">
+          <div id="form-errors" class="form-errors" role="status" aria-live="polite"></div>
+          <input type="hidden" name="form-name" value="vana-application">
+          <p class="sr-only"><label><span class="label-strong">Do not fill this out:</span><input name="bot-field" /></label></p>
+
+          <div class="grid two">
+            <label><span class="label-strong">First Name</span><input type="text" name="first_name" autocomplete="given-name" required>
+            </label>
+            <label><span class="label-strong">Last Name</span><input type="text" name="last_name" autocomplete="family-name" required>
+            </label>
+          </div>
+
+          <div class="grid two">
+            <label><span class="label-strong">Phone</span><input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+44 7…">
+            </label>
+            <label><span class="label-strong">Email</span><input type="email" name="email" autocomplete="email" required>
+            </label>
+          </div>
+
+          <div class="grid two">
+            <label><span class="label-strong">Age</span><input type="number" name="age" inputmode="numeric" min="18" max="60" required>
+            </label>
+            <label><span class="label-strong">Job Title</span><input type="text" name="job" autocomplete="organization-title" required>
+            </label>
+          </div>
+
+          <div class="grid two">
+            <label><span class="label-strong">London Borough</span><select name="borough" required>
+                <option value="">Select an option</option>
+                <option>Barking and Dagenham</option><option>Barnet</option><option>Bexley</option>
+                <option>Brent</option><option>Bromley</option><option>Camden</option><option>Croydon</option>
+                <option>Ealing</option><option>Enfield</option><option>Greenwich</option><option>Hackney</option>
+                <option>Hammersmith and Fulham</option><option>Haringey</option><option>Harrow</option><option>Havering</option>
+                <option>Hillingdon</option><option>Hounslow</option><option>Islington</option><option>Kensington and Chelsea</option>
+                <option>Kingston upon Thames</option><option>Lambeth</option><option>Lewisham</option><option>Merton</option>
+                <option>Newham</option><option>Redbridge</option><option>Richmond upon Thames</option><option>Southwark</option>
+                <option>Sutton</option><option>Tower Hamlets</option><option>Waltham Forest</option><option>Wandsworth</option><option>Westminster</option>
+              </select>
+            </label>
+            <label>
+              <span class="label-strong">Instagram</span>
+              <input type="text" name="instagram" autocomplete="off" placeholder="@yourhandle or full URL">
+            </label>
+          </div>
+
+          <div class="grid two">
+            <label>
+              <span class="label-strong">LinkedIn</span>
+              <input type="url" name="linkedin" autocomplete="url" placeholder="https://linkedin.com/in/you">
+            </label>
+            <label><span class="label-strong">Relationship status</span><select name="relationship_status" required>
+                <option value="">Select one</option>
+                <option>Single</option>
+                <option>Casually dating</option>
+                <option>In a relationship</option>
+                <option>Prefer not to say</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="field">
+            <span class="label-strong">What is drawing you to a vana weekend?</span>
+            <p class="prompt">Select all that apply.</p>
+            <div class="checkbox-list">
+              <label><input type="checkbox" name="motivation" value="Meet new people"> Meet new people</label>
+              <label><input type="checkbox" name="motivation" value="A weekend away"> A weekend away</label>
+              <label><input type="checkbox" name="motivation" value="Food, wine, and big laughs"> Food, wine, and big laughs</label>
+              <label><input type="checkbox" name="motivation" value="Spaces that feel designed, not default"> Spaces that feel designed, not default</label>
+              <label><input type="checkbox" name="motivation" value="The group vibe"> The group vibe</label>
+              <label><input type="checkbox" name="motivation" value="Maybe meet someone"> Maybe meet someone</label>
+              <label><input type="checkbox" id="motivation-other" name="motivation" value="Other"> Other</label>
+              <label id="motivation-other-text-wrap" style="display:none;margin-top:8px;">
+                <span class="sr-only">Other (please specify)</span>
+                <input type="text" name="motivation_other_detail" placeholder="Tell us more">
+              </label>
+            </div>
+          </div>
+
+          <script>
+            (function(){
+              var other = document.getElementById('motivation-other');
+              var wrap = document.getElementById('motivation-other-text-wrap');
+              if(other && wrap){ other.addEventListener('change', function(){ wrap.style.display = other.checked ? 'block' : 'none'; }); }
+            })();
+          </script>
+
+          <label>
+            <span class="label-strong">Vibe check</span>
+            <p class="prompt">What kind of weekend feels right to you, and why?</p>
+            <textarea name="vibe_check" rows="6" required></textarea>
+          </label>
+
+          <!-- Move opt-in to the bottom -->
+          <input type="hidden" name="marketing_opt_in" value="no">
+          <label class="consent">
+            <input type="checkbox" name="marketing_opt_in" value="yes">
+            I’d like to receive occasional emails about vana weekends and events. <em></em>
+          </label>
+
+          <label class="consent">
+            <input type="checkbox" name="consent_agree" required>
+            I agree to the <a href="/privacy.html" target="_blank" rel="noopener">privacy policy</a>.
+          </label>
+
+          <!-- reCAPTCHA (Netlify) -->
+          <div data-netlify-recaptcha="true"></div>
+
+          <div class="actions">
+            <button class="btn" type="submit">Apply Now</button>
+            <p class="help">By submitting, you agree to our <a href="/terms.html">Terms</a> and <a href="/code-of-conduct.html">Code of Conduct</a>.</p>
+          </div>
+
+          <script>
+            (function(){
+              var f = document.currentScript.closest('form');
+              if(!f) return;
+              f.addEventListener('submit', function(event){
+                var boxes = f.querySelectorAll('[name="motivation"]');
+                var ok = Array.from(boxes).some(function(b){ return b.checked; });
+                if(!ok){
+                  document.getElementById('form-errors').textContent = 'Please select at least one motivation.';
+                  event.preventDefault(); return false;
+                }
+                if(window.gtag) gtag('event','generate_lead',{form:'apply'});
+              });
+            })();
+          </script>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Inline mini-FAQ -->
+  <section class="slant-top slant-bottom" aria-labelledby="apply-faqs">
+    <div class="wrap reveal">
+      <h2 id="apply-faqs" class="center-me">FAQs</h2>
+
+      <details class="faq" name="faqs">
+        <summary>Is vana a dating trip?</summary>
+        <div>No. It’s about great weekends with great people. Chemistry happens naturally, but the design is in the taste, conversation, food and place.</div>
+      </details>
+
+      <details class="faq" name="faqs">
+        <summary>Who is it for?</summary>
+        <div>Curious, considerate Londoners (young adults) who value good stays, good food, and good company. We keep groups small for easy conversation.</div>
+      </details>
+
+      <details class="faq" name="faqs">
+        <summary>What’s included in the price?</summary>
+        <div>Two nights in a design-led venue, hosted long-table meals, light activities, and group transport from London. Optional add-ons for wines and single occupancy.</div>
+      </details>
+
+      <details class="faq" name="faqs">
+        <summary>Do I need to know anyone?</summary>
+        <div>No. Most guests come solo. Your host smooths intros from pick-up to drop-off so you can relax fast.</div>
+      </details>
+
+      <details class="faq" name="faqs">
+        <summary>Can I come if I don’t drink?</summary>
+        <div>Absolutely. No- and low-alcohol options are always available.</div>
+      </details>
+
+      <p class="center-me" style="margin-top:16px;opacity:.8"><a href="/faq.html">See all FAQs →</a></p>
+    </div>
+  </section>
+
+  <!-- Footer with socials -->
+  <footer>
+    <div class="wrap">
+      <div>© <span id="year"></span> vana London</div>
+      <div class="socials">
+        <a href="https://www.instagram.com/vana.london" aria-label="Instagram" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/company/vanalondon" aria-label="LinkedIn" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.tiktok.com/@vana.london" aria-label="TikTok" target="_blank" rel="noopener">TikTok</a>
+        <small class="ai-note" style="opacity:.6; margin-left:.6rem">Some visuals may include AI-assisted composites.</small>
+      </div>
+      <div style="margin-top:.5rem">
+        <a href="/privacy.html">Privacy</a> ·
+        <a href="/terms.html">Terms</a> ·
+        <a href="/cookies.html">Cookies</a> ·
+        <a href="mailto:hello@vanalondon.com">hello@vanalondon.com</a>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <!-- Cookie modal -->
+  <div id="cookie-modal" class="cookie-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cookie-title" aria-describedby="cookie-desc" style="display:none;">
+    <div class="cookie-inner">
+      <h2 id="cookie-title">Help us improve vana</h2>
+      <p id="cookie-desc">We use cookies to remember preferences and, with your permission, to understand how our site is used so we can design better weekends. Choose what you’d like.</p>
+
+      <div class="cookie-actions">
+        <button id="accept-all" class="btn btn-primary">Accept all</button>
+        <button id="reject-all" class="btn btn-secondary">Reject all</button>
+        <button id="manage-settings" class="btn btn-link">Manage settings</button>
+      </div>
+
+      <div id="cookie-settings" class="cookie-settings" style="display:none;">
+        <label><input type="checkbox" id="analytics-toggle"> Analytics (helps us see what’s working)</label><br>
+        <label><input type="checkbox" id="marketing-toggle"> Marketing (occasional event updates)</label><br>
+        <div style="margin-top:10px;">
+          <button id="save-settings" class="btn btn-primary small">Save choices</button>
+          <button id="cancel-settings" class="btn btn-secondary small">Cancel</button>
+        </div>
+      </div>
+
+      <button id="cookie-close" class="cookie-close" aria-label="Close cookie dialog" title="Close">×</button>
+    </div>
+  </div>
+  <script src="/assets/cookie.js"></script>
+
+  <!-- Universal nav highlight -->
+  <script>
+  (function () {
+    const toIndex = p => p.replace(/\/$/, "/index.html");
+    const aliasMap = { "/register.html": "/apply.html" }; // register lights up "Apply"
+    const hereRaw = toIndex(location.pathname || "/");
+    const here = aliasMap[hereRaw] || hereRaw;
+    const nav = document.querySelector("nav.links"); if (!nav) return;
+    nav.querySelectorAll("a[href]").forEach(a => {
+      try {
+        const url = new URL(a.getAttribute("href"), location.origin);
+        if (url.origin !== location.origin) return;
+        const linkPathRaw = toIndex(url.pathname || "/");
+        const linkPath = aliasMap[linkPathRaw] || linkPathRaw;
+        const isActive = linkPath === here || (here === "/index.html" && linkPath === "/");
+        if (isActive) { a.setAttribute("aria-current","page"); a.classList.add("is-active"); }
+      } catch(e){}
+    });
+  })();
+  </script>
+
+  <!-- Reveal JS -->
+  <script>
+    (function(){
+      const els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) || !els.length) return;
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(en => { if (en.isIntersecting) en.target.classList.add('is-visible'); });
+      }, { threshold: 0.12 });
+      els.forEach(el => io.observe(el));
+    })();
+  </script>
+</body>
+</html>

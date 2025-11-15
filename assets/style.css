@@ -1,0 +1,444 @@
+:root{
+  --sand:#F4EDE4;       /* Linen Mist */
+  --paper:#D8C9B6;      /* Stone Smoke */
+  --honey:#D5A55D;      /* Golden Hour */
+  --rose:#B47052;       /* Terracotta Veil */
+  --plum:#724D3D;       /* Ember Clay */
+  --ink:#2F2A27;        /* Ink Noir */
+  --wine:#4C2E2B;       /* Plum Shadow */
+  --rosewood:#7D524D;   /* Rosewood Depth */
+  --blush:#AE756F;      /* Wine Blush */
+  --coral:#E5837E;      /* Coral Ember */
+
+  --max:1100px;
+  --gap:clamp(16px,3vw,28px);
+  --radius:18px;
+  --line:rgba(114,77,61,.18);
+  --shadow:0 10px 30px rgba(114,77,61,.10);
+  --sketch:#b9b0a8;
+  --header-h:64px;
+}
+
+
+/* --- VANA buttons (restored) --- */
+.btn{
+  display:inline-block;
+  border:none;
+  border-radius:var(--radius);
+  padding:.7em 1.4em;
+  cursor:pointer;
+  background:var(--coral);
+  color:var(--sand);
+  font-family:"Nunito Sans", system-ui, sans-serif;
+  font-weight:600;
+  letter-spacing:0.2px;
+  transition:background .25s ease, transform .2s ease, box-shadow .2s ease;
+  text-decoration:none;
+  line-height:1;
+}
+.btn:hover{ transform: translateY(-1px); background: var(--rose); }
+.btn.small{ padding:.5em 1em; font-size:.875rem; }
+
+.btn.btn-secondary,.btn-secondary{
+  background:transparent;
+  border:1px solid rgba(47,42,39,.25);
+  color:var(--ink);
+}
+.btn.btn-secondary:hover,.btn-secondary:hover{
+  background:rgba(229,131,126,.08);
+  border-color:var(--coral);
+  color:var(--ink);
+}
+
+/* Reset / base */
+*{box-sizing:border-box}html,body{margin:0;padding:0}img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+html{font-size:16px;text-rendering:optimizeLegibility}
+body {
+  background: var(--sand);
+  color: var(--ink);
+  font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.65;
+  text-transform: none;
+}
+
+h1, h2, h3 {
+  font-family: "Nunito Sans", system-ui, sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+  margin: 0 0 .4em;
+  text-transform: lowercase;
+}
+
+/* Layout wrappers */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gap)}
+.wrap.nav,.wrap.foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--gap)}
+.hero,section{position:relative}
+section.alt{background:var(--paper)}
+section.slant-top::before,section.slant-bottom::after{
+  content:"";display:block;position:absolute;left:0;right:0;height:80px;background:var(--sand);clip-path:polygon(0 0,100% 100%,0 100%);
+  pointer-events:none;z-index:0;
+}
+section.slant-top::before{top:0;transform:rotate(180deg)}
+section.slant-bottom::after{bottom:0}
+section,section .wrap,.card{position:relative;z-index:1}
+
+/* Force hero background image sitewide on .hero--bg */
+.hero.hero--bg{
+  background:
+    linear-gradient(0deg, rgba(76,46,43,.48), rgba(76,46,43,.28)),
+    image-set(
+      url('/assets/images/hero-1600.avif') type('image/avif'),
+      url('/assets/images/hero-1600.webp') type('image/webp'),
+      url('/assets/images/hero-1600.jpg')  type('image/jpeg')
+    ) center/cover no-repeat !important;
+  color:#F3EDE5;
+  text-shadow:0 1px 10px rgba(0,0,0,.25);
+  min-height:clamp(280px,35vh,520px);
+}
+
+
+/* Headings & text */
+h1,h2,h3{font-family:"Urbanist",system-ui,sans-serif;font-weight:600;line-height:1.3;margin:0 0 .4em}
+h1{font-size:clamp(2rem,5vw,3rem)}h2{font-size:clamp(1.5rem,4vw,2rem)}h3{font-size:clamp(1.25rem,3vw,1.5rem)}
+p{margin:0 0 1em}
+
+/* Buttons */
+\1 var(--coral);\2 var(--sand);
+  font-family:"Urbanist",sans-serif;font-weight:500;transition:background .25s ease,transform .2s ease}
+\1 var(--rose);border:1px solid rgba(0,0,0,.2);color:var(--ink)}
+.btn.small{padding:.5em 1em;font-size:.875rem}
+
+/* Forms */
+input,select,textarea{width:100%;border-radius:var(--radius);border:1px solid rgba(0,0,0,.1);padding:.75em 1em;font-family:inherit;font-size:1rem}
+label{display:block;margin-bottom:1em;font-size:.95rem}
+input[type=checkbox]{width:auto;margin-right:.4em}
+textarea{resize:vertical}fieldset{border:none;margin:0;padding:0}
+.req{display:none!important}
+
+
+/* Nav + header */
+header{position:sticky;top:0;background:rgba(243,237,229,.8);backdrop-filter:blur(10px);z-index:10;border-bottom:1px solid rgba(0,0,0,.05);min-height:var(--header-h)}
+.brand span {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+}nav.links{display:flex;flex-wrap:wrap;gap:6px 4px}
+nav.links a{font-weight:500;padding:.6em .9em;position:relative;transition:color .2s ease,opacity .2s ease}
+\1 var(--coral);opacity:.9}
+\1 var(--coral);border-radius:1px}
+
+/* Hero sections */
+.hero{display:flex;align-items:center;justify-content:center;text-align:center;color:var(--ink);padding:clamp(60px,12vw,140px) 0}
+.hero.small{padding:clamp(80px,10vw,160px) 0 100px}
+.hero .lede{font-size:1.15rem;opacity:.85;max-width:600px;margin:0 auto 1.5em}
+/* Optional background image helper */
+.hero--bg{
+  background:
+    linear-gradient(0deg, rgba(76,46,43,.48), rgba(76,46,43,.28)),
+    image-set(
+      url('/assets/images/hero-1600.avif') type('image/avif'),
+      url('/assets/images/hero-1600.webp') type('image/webp'),
+      url('/assets/images/hero-1600.jpg')  type('image/jpeg')
+    ) center/cover no-repeat;
+  color: var(--sand);
+  text-shadow: 0 1px 10px rgba(0,0,0,.25);
+}
+@supports (background:image-set(url("x") type("image/avif"))){
+  .hero--bg[data-bg]{background:
+    linear-gradient(0deg,rgba(76,46,43,.48),rgba(76,46,43,.28)),
+    image-set(url(var(--bg-avif)) type("image/avif"),
+              url(var(--bg-webp)) type("image/webp"),
+              url(var(--bg-jpg)) type("image/jpeg")) center/cover no-repeat}
+}
+
+/* Cards + layout blocks */
+.card{background:var(--sand);box-shadow:var(--shadow);border-radius:var(--radius);padding:clamp(20px,4vw,40px)}
+.grid.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5em}
+
+/* Split layout (copy | media). Use .reverse to flip. */
+.split{display:grid;align-items:center;gap:2.2rem;grid-template-columns:1.1fr .9fr}
+.split.reverse{grid-template-columns:.9fr 1.1fr}
+.split-copy ul{margin:0;padding-left:1.2em}
+.split-media img{width:100%;max-height:560px;object-fit:cover;border-radius:var(--radius)}
+@media (max-width:900px){.split,.split.reverse{grid-template-columns:1fr}.split-media img{max-height:420px}}
+
+/* Features (Drawn to ...) */
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5em;text-align:center}
+.features .circle{border-radius:50%;aspect-ratio:1/1;object-fit:cover;margin-bottom:1em;width:100%}
+
+.features.three { grid-template-columns: repeat(3, minmax(240px, 1fr)); gap: 2rem; }
+.features.three article { max-width: 420px; margin: 0 auto; }
+.features.three .circle { max-width: 360px; margin: 0 auto 1rem; } /* big round images like your screenshot */
+
+
+/* Footer */
+footer{background:var(--paper);font-size:.9rem;color:rgba(0,0,0,.75);padding:2em 0}
+.foot-links a{margin-left:.4em}.foot-links a:first-child{margin-left:0}
+.foot-links .social{margin-left:.6em;opacity:.85}.foot-links .social:hover{opacity:1}
+.tagline-foot em{font-style:normal;opacity:.8}
+
+/* Cookie modal */
+.cookie-modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;z-index:9999}
+.cookie-inner{background:var(--sand);border-radius:var(--radius);padding:2em;max-width:480px;box-shadow:var(--shadow);position:relative}
+.cookie-actions{margin-top:1.5em;display:flex;gap:1em;flex-wrap:wrap}
+.cookie-settings{margin-top:1em}
+.cookie-close{position:absolute;top:10px;right:14px;background:none;border:none;font-size:1.4rem;cursor:pointer}
+
+/* Accessibility / motion */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* Reading & spacing polish */
+.wrap,p,li,.form,label,input,textarea{overflow-wrap:anywhere;word-break:break-word}
+main,[id]{scroll-margin-top:calc(var(--header-h) + 10px)}
+section.slant-bottom{padding-bottom:max(120px,10vh)}
+section.slant-top{padding-top:max(60px,6vh)}
+
+/* FAQ formatting */
+details.faq{margin:10px 0;border-radius:12px;overflow:hidden;background:transparent}
+details.faq summary{list-style:none;cursor:pointer;padding:14px 16px;font-weight:600;background:rgba(0,0,0,.04)}
+details.faq[open] summary{background:rgba(0,0,0,.06)}
+details.faq>div{padding:12px 16px 16px;color:rgba(0,0,0,.85)}
+/* Optional chevron */
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"▸";float:right;transition:transform .2s ease;opacity:.7}
+details.faq[open] summary::after{transform:rotate(90deg);opacity:1}
+
+/* Hover polish (from v10) */
+nav.links a{transition:color .2s ease,opacity .2s ease}
+\1 var(--coral);opacity:.9}
+.btn.btn-secondary,.btn-secondary{transition:background-color .2s ease,color .2s ease,border-color .2s ease}
+.btn.btn-secondary:hover,.btn-secondary:hover{background:rgba(229,131,126,.08);border-color:var(--coral);color:var(--ink)}
+/* Optional stronger hero overlay as a utility */
+.hero--contrast{position:relative;overflow:hidden}
+.hero--contrast::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,rgba(20,14,13,.55),rgba(20,14,13,.35))}
+
+/* Fallback: ensure hero background always shows */
+.hero--bg,
+.hero.small {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--sand);
+}
+
+.hero--bg[data-bg] {
+  background:
+    linear-gradient(0deg, rgba(76,46,43,.48), rgba(76,46,43,.28)),
+    url('/assets/images/hero-1600.jpg') center/cover no-repeat;
+}
+
+@supports (background: image-set(url("x") type("image/avif"))) {
+  .hero--bg[data-bg] {
+    background:
+      linear-gradient(0deg, rgba(76,46,43,.48), rgba(76,46,43,.28)),
+      image-set(
+        url('/assets/images/hero-1600.avif') type('image/avif'),
+        url('/assets/images/hero-1600.webp') type('image/webp'),
+        url('/assets/images/hero-1600.jpg') type('image/jpeg')
+      ) center/cover no-repeat;
+  }
+}
+
+/* Circle image layout fix */
+.features .circle {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+/* Prevent slants covering text/images */
+section, section .wrap, .card, .split, .features {
+  position: relative;
+  z-index: 1;
+}
+
+/* Anti-hairline fixes for slanted sections */
+section.slant-top,
+section.slant-bottom { position: relative; z-index: 0; }
+
+section.slant-top::before,
+section.slant-bottom::after {
+  /* whatever background you already set */
+  position: absolute;
+  left: 0; right: 0;
+  content: "";
+  pointer-events: none;
+  backface-visibility: hidden;
+  transform: translateZ(0);              /* force GPU, reduces AA seams */
+}
+
+/* Overlap the next/prev section by a couple of pixels */
+section.slant-top::before  { top:  -2px; height: 7vw;  transform: skewY(3deg) translateZ(0);  }
+section.slant-bottom::after{ bottom:-2px; height: 7vw;  transform: skewY(-3deg) translateZ(0); }
+
+/* If you use borders/shadows on sections, don’t draw them under slants */
+section.slant-top, section.slant-bottom { box-shadow: none; border: 0; }
+
+/* Example: slant the bottom edge of a section using clip-path */
+section.slant-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+}
+section.slant-top {
+  clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0 100%);
+}
+
+
+/* === MOTH Forms v11.4 === */
+
+/* Structure & spacing */
+.form{--row:18px; --col:14px}
+.form .grid.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--row) var(--col)}
+@media (max-width: 760px){ .form .grid.two{grid-template-columns:1fr} }
+.form label{display:block;margin:0 0 .8rem}
+.form .field{margin-bottom:1rem}
+
+/* Inputs: contrast + focus */
+.form input,.form select,.form textarea{
+  width:100%;border-radius:var(--radius);
+  border:1px solid rgba(0,0,0,.2); /* darker for contrast */
+  background:#fff; /* clearer against paper background */
+  padding:.75em 1em;font-size:1rem
+}
+\1 var(--coral);box-shadow:0 0 0 3px rgba(113,75,75,.15)
+}
+
+/* Checkbox rows */
+.form .checkbox-list label{display:flex;gap:.6rem;align-items:flex-start;margin:.5rem 0}
+.form .checkbox-list input[type=checkbox]{margin-top:.25rem}
+.form input[type=checkbox]{width:auto}
+
+
+/* Section headings inside forms */
+.form .label-strong {
+  display:inline-block;
+  font-weight:600;
+  color:var(--ink);
+  margin:0 0 .35rem;
+}
+.form .prompt{font-style:italic;font-size:.95rem;opacity:.9;margin:.1rem 0 .6rem}
+
+[required] + .label-strong::after,
+label:has(:required) .label-strong::after {
+  content:" ∗";
+  color:var(--rose);
+  font-weight:600;
+  margin-left:.2em;
+}
+
+/* Submit area, helper text & captcha */
+.form .actions{margin-top:1rem;display:flex;flex-direction:column;gap:.6rem}
+.g-recaptcha,[data-netlify-recaptcha]{margin:.6rem 0 1rem}
+
+/* Tiny helper/footnote */
+.form .help{opacity:.8;font-size:.875rem}
+
+/* Keep content above decorative slants just in case */
+section,section .wrap,.card,.form{position:relative;z-index:1}
+
+.split-media{overflow:hidden;border-radius:var(--radius)}
+
+.cta-band{padding-bottom:48px;}
+
+/* Bold the field titles and place the single asterisk right next to them */
+.form .label-strong{display:inline-block;font-weight:600}
+label:has(:required) .label-strong::after{
+  content:" ∗";
+  color:var(--rose);
+  font-weight:600;
+  margin-left:.2em;
+}
+
+/* ---------- Seamless slants (override the old skewY version) ---------- */
+
+/* Size of the slant edge */
+:root { --slant: clamp(28px, 6vw, 96px); }
+
+/* Kill previous pseudo-elements so they don't stack/double-line */
+section.slant-top::before,
+section.slant-bottom::after {
+  content: none !important;
+}
+
+/* Make sure sections create their own stacking context */
+section.slant-top,
+section.slant-bottom {
+  position: relative;
+  z-index: 0;
+  /* remove any borders/shadows that might show as a hairline at the cut */
+  border: 0;
+  box-shadow: none;
+}
+
+/* Cut the section itself to form the diagonal */
+section.slant-top {
+  /* top edge angled down toward the left */
+  clip-path: polygon(0 var(--slant), 100% 0, 100% 100%, 0% 100%);
+}
+
+section.slant-bottom {
+  /* bottom edge angled down toward the right */
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--slant)), 0% 100%);
+}
+
+/* Optional: if you have any decorative dotted/hand-drawn lines set on slant
+   pseudo-elements, disable them here to avoid ghost lines */
+section.slant-top,
+section.slant-bottom {
+  background-image: none; /* keep your normal background-color/image as-is */
+}
+
+
+/* ---------------- APPLY PAGE SPACING FIX ---------------- */
+body.apply main section.alt.slant-top,
+body.apply main section.alt.slant-bottom {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+body.apply .card.form {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* ---------------- FAQ PAGE HERO FIX ---------------- */
+body.faq .hero {
+  padding-top: 8rem; /* adds headroom so text isn’t cut off by slant */
+}
+
+/* FAQ: keep the slant but add headroom so text isn't clipped */
+body.faq .cta-band {
+  padding-top: calc(var(--slant) + 3rem);
+  padding-bottom: 4rem; /* nice breathing room above footer */
+}
+
+/* --- MOTH tiny additions (non-breaking) --- */
+html { scroll-behavior: smooth; }               /* optional: smoother anchor jumps */
+input, textarea, select { background-clip: padding-box; }  /* iOS autofill bleed fix */
+
+/* VANA lowercase styling polish */
+h1, h2, h3, .btn, .brand span {
+  text-transform: lowercase;
+}
+
+p, li {
+  letter-spacing: 0.15px;
+}
+
+
+/* Button focus ring for accessibility */
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(229,131,126,.28); /* coral ring */
+}
+
+
+a:hover{color:var(--coral)}

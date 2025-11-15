@@ -1,0 +1,15 @@
+{
+  "name": "vana London",
+  "short_name": "vana",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f4f1",
+  "theme_color": "#f7f4f1",
+  "description": "Curated weekend escapes near London for creative professionals.",
+  "categories": ["travel", "hospitality", "lifestyle"],
+  "icons": [
+    { "src": "/assets/icons/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/icons/favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

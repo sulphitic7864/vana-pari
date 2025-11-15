@@ -1,0 +1,10 @@
+# Quality-of-life routes
+/register.html   /apply.html   301!
+/register        /apply.html   301!
+
+# (Optional) trailing-slash tidy
+# /apply         /apply.html   301
+# /about         /about.html   301
+
+# 404 fallback
+/*  /404.html  404
