@@ -846,7 +846,7 @@ h2,
 h3,
 .btn,
 .brand span {
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 
 p,
